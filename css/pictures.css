@@ -1,6 +1,19 @@
 body{
   width: auto;
   background-color: #01020a;
+  color: white;
+}
+
+.container-body{
+  margin-left: 15%!important;
+  margin-right: 15%!important;
+  padding: 5rem;
+  text-align: center;
+}
+
+#areaImages{
+  float: left; 
+  display: flexbox;
 }
 
 a{

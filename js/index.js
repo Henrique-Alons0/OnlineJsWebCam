@@ -14,7 +14,7 @@
   const btnScreenshot = document.querySelector("#btnScreenshot");
   const downloader = document.querySelector("#imageDownloader");
   // const btnChangeCamera = document.querySelector("#btnChangeCamera");
-  // const screenshotsContainer = document.querySelector("#screenshots");
+  const screenshotsContainer = document.querySelector("#screenshots");
   const canvas = document.querySelector("#imageCapture");
   // const devicesSelect = document.querySelector("#devicesSelect");
 
@@ -49,11 +49,6 @@
   // play
   btnPlay?.addEventListener("click", function () {
     initializeCamera();
-    video.play();
-    btnPlay.disabled = true;
-    btnPause.disabled = false;
-    btnScreenshot.disabled = false;
-
   });
 
   // pause
@@ -70,6 +65,11 @@
       canvas.width = video.videoWidth;
       canvas.height = video.videoHeight;
       canvas.getContext("2d").drawImage(video, 0, 0);
+      const img = document.createElement('img');
+      img.classList.add('screenshots');
+      img.src = canvas.toDataURL('image/png');
+      screenshotsContainer.prepend(img);
+      document.getElementById('nothingToHere').remove();
       downloadPng();
     }
   });
@@ -106,6 +106,9 @@
       video.srcObject = videoStream;
       video.onloadedmetadata = () => {
         video.play();
+        btnPlay.disabled = true;
+        btnPause.disabled = false;
+        btnScreenshot.disabled = false;
       };
     } catch (err) {
       alert("Could not access the camera");

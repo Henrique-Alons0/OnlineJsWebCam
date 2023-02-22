@@ -1,6 +1,14 @@
 body{
   width: auto;
   background-color: #01020a;
+  color: white;
+}
+
+.container-body{
+  margin-left: 20%!important;
+  margin-right: 20%!important;
+  padding: 5rem;
+  text-align: center;
 }
 
 a{
@@ -35,4 +43,9 @@ a:focus{
 .nav-link:hover{
   color: #d9d9d9!important;
   text-decoration: underline;
+}
+
+.active{
+  color: #8a8780!important;
+
 }

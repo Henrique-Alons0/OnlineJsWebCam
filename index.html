@@ -7,46 +7,108 @@
   <title>CamOnJs</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="js/auxFunction.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #010317!important; color: white!important; font-size: 1.3rem; font-family: Arial, Helvetica, sans-serif;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" height="45" width="45"></a>
+      <a id="homeButton" class="navbar-brand homeButton" href="#"><img src="img/logo.png" alt="" height="45" width="45"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <!-- <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li> -->
+          <li class="nav-item homeButton">
+            <a class="nav-link homeButton" aria-current="page" href="#">Home</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/pictures.html">See Pictures</a>
+            <a id="seePicturesButton" class="nav-link" href="">See Pictures</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/share.html">Share</a>
-          </li>          
+          </li>        
         </ul>
       </div>
     </div>
   </nav>
-  <div id="videoData">
-    <video id="cameraData">
-      <p>Não foi possível carregar a camera, tente novamente!</p>
-    </video>
+  <div id="firstContent">
+    <div id="videoData">
+      <video id="cameraData">
+        <p>Was not possible load camera, try again!</p>
+      </video>
+    </div>
+    <canvas id="imageCapture" hidden></canvas>
+    <a id="imageDownloader" href="" download="PictureOfCamOnJs.png" target="_self" hidden></a>
+    <div class="buttonsArea">
+      <button class="btn btn-success" id="buttonCodeCapture"><img class="btnIcon" src="img/play-circle-fill.svg" alt="A Play-Circle-Fill icon from Bootstrap Icons!">Inicializar</button>
+      <button class="btn btn-warning" id="closeCamera"><img class="btnIcon" src="img/stop-circle-fill.svg" alt="A Stop-Circle-Fill icon from Bootstrap Icons!">Pausar</button>
+      <button class="btn btn-danger" id="btnScreenshot"><img class="btnIcon" src="img/camera-fill.svg" alt="A Camera-Fill icon from Bootstrap Icons!">Capturar</button>
+    </div>
   </div>
-  <canvas id="imageCapture" hidden></canvas>
-  <a id="imageDownloader" href="" download="PictureOfCamOnJs.png" target="_self" hidden></a>
-  <div class="buttonsArea">
-    <button class="btn btn-success" id="buttonCodeCapture"><img class="btnIcon" src="img/play-circle-fill.svg" alt="A Play-Circle-Fill icon from Bootstrap Icons!">Inicializar</button>
-    <button class="btn btn-warning" id="closeCamera"><img class="btnIcon" src="img/stop-circle-fill.svg" alt="A Stop-Circle-Fill icon from Bootstrap Icons!">Pausar</button>
-    <button class="btn btn-danger" id="btnScreenshot"><img class="btnIcon" src="img/camera-fill.svg" alt="A Camera-Fill icon from Bootstrap Icons!">Capturar</button>
+  <div id="secondContent">
+    <div class="container-body">
+      <h1>Pictures</h1>
+      <div id="screenshots">
+        <p id="nothingToHere">Nothing to here, you could take captures on Home area!</p>
+      </div>
+    </div>
   </div>
 
-  <a href='https://.pngtree.com/so/camera'>camera png de .pngtree.com/</a>
+  <footer class="bg-dark text-center text-lg-start mt-5" style="background-color: #0b132b!important;">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Technologies</h5>
+  
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="https://getbootstrap.com/" class="text-light" target="_blank">Bootstrap</a>
+            </li>
+            <li>
+              <a href="https://www.google.com/search?q=html+5&oq=html+5&aqs=chrome..69i57j0i512j0i10i512l2j0i512j69i60l3.1648j0j4&sourceid=chrome&ie=UTF-8" class="text-light" target="_blank">HTML5</a>
+            </li>
+            <li>
+              <a href="https://www.google.com/search?q=CSS3&ei=Zz_2Y_nSAdfR1sQPm5KvuAc&ved=0ahUKEwi5oseHw6n9AhXXqJUCHRvJC3cQ4dUDCA8&uact=5&oq=CSS3&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECAAQQzIHCAAQsQMQQzIECAAQQzIECAAQQzIKCAAQsQMQgwEQQzILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMgUIABCABDILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBOgoIABBHENYEELADOgcIABCwAxBDOgkIABCwAxAKEEM6DQgAEOQCENYEELADGAE6DwguENQCEMgDELADEEMYAjoQCC4QgwEQxwEQsQMQ0QMQQzoLCC4QgAQQsQMQgwE6CAguELEDEIMBOg0ILhDHARDRAxDUAhBDOggIABCABBCxAzoICAAQsQMQgwE6CAguEIAEELEDSgQIQRgAUPQHWKQSYLQTaAJwAXgAgAGoAYgB5ASSAQMwLjSYAQCgAQHIARHAAQHaAQYIARABGAnaAQYIAhABGAg&sclient=gws-wiz-serp" class="text-light" target="_blank">CSS3</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" class="text-light">Javascript</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0">References</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://pngtree.com/so/camera" class="text-light" target="_blank">Pngtree.com</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/henrique-alonso-911849181/" class="text-light" target="_blank">LinkedIn (Henrique Alonso)</a>
+            </li>
+            <li>
+              <a href="https://github.com/henrique-alons0/" class="text-light" target="_blank">GitHub (Henrique Alonso)</a>
+            </li>
+            <li>
+              <a href="https://github.com/henrique-alons0/OnlineJsWebCam" class="text-light" target="_blank">Repository</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">ABOUT THE PROJECT</h5>
+  
+          <p>
+            The main objective of this project is to show how to use mediaDevices resources with JavaScript and manipulate images.
+            Since the beginning of the project, the main objective was to build the application in a simple and succinct way, so that other people can learn from this project.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: #010317;">
+      © 2023 Copyright:
+      <a class="text-light" href="https://github.com/henrique-alons0">Henrique Alonso</a>
+    </div>
+  </footer>
   <script src="js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
