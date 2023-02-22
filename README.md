@@ -3,7 +3,7 @@
 <div style="float: left">
     <img src="https://img.shields.io/static/v1?label=Build&message=Build Process&color=7159c1&style=plastic&logo=ghost"/>
     <img alt="GitHub deployments" src="https://img.shields.io/github/deployments/henrique-alons0/OnlineJsWebCam/main?style=plastic">
-    <img alt="Bower" src="https://img.shields.io/bower/l/html">
+    <img alt="Deployed" src="https://img.shields.io/bower/l/html">
 </div>
 
 
