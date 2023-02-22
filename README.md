@@ -60,7 +60,6 @@ Table of Contents
 
 - [x] Construction of the capture mechanism;
 - [x] Implementing actions (start, stop, capture);
-- [ ] About screen development;
-- [ ] Screen Development See Pictures;
-- [ ] Share screen development;
+- [x] About screen development;
+- [x] Screen Development See Pictures;
 
