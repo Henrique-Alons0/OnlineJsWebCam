@@ -12,32 +12,32 @@
 <h2 align="center">
     <a href="https://getbootstrap.com/">🔗 Bootstrap</a>
 </h2>
-<p align="center">🚀 framework de código aberto utilizado na componentização e empacotamento de estilos</p>
+<p align="center">🚀 Open source framework used for componentization and styling packaging</p>
 <h2 align="center">
     <a href="https://.pngtree.com/so/camera">🔗 Pngtree.com</a>
 </h2>
-<p align="center">🚀 distribuidor de icones e arquivos de midia (.png/.svg/.jpeg/.ico)</p>
+<p align="center">🚀 distributor of icons and media files (.png/.svg/.jpeg/.ico)</p>
 
-Tabela de conteúdos
+Table of Contents
 =================
 <!--ts-->
-   * [Sobre](#Sobre)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
-   * [Instalação](#instalacao)
-   * [Como usar](#como-usar)
-   * [Tecnologias](#tecnologias)
+   * [About](#Sobre)
+   * [Table of Contents](#tabela-de-conteudo)
+   * [Installation](#instalacao)
+   * [How to use](#como-usar)
+   * [Technologies](#tecnologias)
    * [Features](#features)
 <!--te-->
 
-<h1 id="instalacao" style="text-align: center; color: #0f9936;">Instalação</h1>
+<h1 id="instalacao" style="text-align: center; color: #0f9936;">Installation</h1>
 
 <p>To run the program, no prior installation is necessary, as it is only done with html, csss, javascript and bootstrap.</p>
 <p>The only observation is that because the bootstrap import was done via link, the site will need internet for the styling to be fully rendered.</p>
 
-<h1 id="como-usar" style="text-align: center; color: #0f9936;">Como Usar</h1>
+<h1 id="como-usar" style="text-align: center; color: #0f9936;">How to use</h1>
 
-<p>Ao acessar a pagina você verá um menu superior, a area onde a camera será exibida e os botões com as ações disponíveis.</p>
-<h2>Instruções Básicas:</h2>
+<p>When accessing the page you will see a top menu, the area where the camera will be displayed and the buttons with the available actions.</p>
+<h2>Basic Instructions:</h2>
 
 | Resource Name  | Action |
 | ------------- | ------------- |
@@ -47,20 +47,20 @@ Tabela de conteúdos
 
 
 
-<h1 id="tecnologias" style="text-align: center; color: #0f9936;">Tecnologias</h1>
+<h1 id="tecnologias" style="text-align: center; color: #0f9936;">Technologies</h1>
 
 <div style="float: left">
-    <img alt="HTML Technology" src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
-    <img alt="CSS Technology" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
-    <img alt="HTML Technology" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-    <img alt="HTML Technology" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+    <img alt="HTML Technologie" src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+    <img alt="CSS Technologie" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
+    <img alt="HTML Technologie" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+    <img alt="HTML Technologie" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 </div>
 
 <h1 id="features" style="text-align: center; color: #0f9936;">Features</h1>
 
-- [x] Construção do mecanismo de captura
-- [x] Implementação de ações (start, stop, capture)
-- [ ] Desenvolvimento de tela About
-- [ ] Desenvolvimento de tela See Pictures
-- [ ] Desenvolvimento de tela Share
+- [x] Construction of the capture mechanism;
+- [x] Implementing actions (start, stop, capture);
+- [ ] About screen development;
+- [ ] Screen Development See Pictures;
+- [ ] Share screen development;
 
