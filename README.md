@@ -26,7 +26,7 @@ Tabela de conteúdos
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
    * [Tecnologias](#tecnologias)
-   * [Tecnologias](#features)
+   * [Features](#features)
 <!--te-->
 
 <h1 id="instalacao" style="text-align: center; color: #0f9936;">Instalação</h1>
