@@ -50,9 +50,10 @@ Tabela de conteúdos
 <h1 id="tecnologias" style="text-align: center; color: #0f9936;">Tecnologias</h1>
 
 <div style="float: left">
-    <img src="[https://img.shields.io/static/v1?label=Build&message=Build Process&color=7159c1&style=plastic&logo=ghost](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)"/>
-    <img alt="GitHub deployments" src="https://img.shields.io/github/deployments/henrique-alons0/OnlineJsWebCam/main?style=plastic">
-    <img alt="Deployed" src="https://img.shields.io/bower/l/html">
+    <img alt="HTML Technology" src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+    <img alt="CSS Technology" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
+    <img alt="HTML Technology" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+    <img alt="HTML Technology" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 </div>
 
 <h1 id="features" style="text-align: center; color: #0f9936;">Features</h1>
